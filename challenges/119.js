@@ -21,6 +21,18 @@ const otherRoads = [
   "Osito's Treehouse <=> Zorro's Den"
 ];
 
+let processed = [];
+
+for ( let line of otherRoads) {
+  // processed.push ( ...line.split(" <=> ") ); // matches book format
+  processed.push ( line.split(" <=> ") );
+}
+// console.log(processed);
+for ( let pair of processed ) {
+  addRoad(...pair);
+}
+
+
 /*
   Process the "otherRoads" array of strings so you can call addRoad for each pair of locations.
 */
